@@ -1,0 +1,73 @@
+.navbar {
+    position: fixed;
+    width: 100%;
+    left: -2px;
+    top: -2px;
+    float: left;
+    background: rgba(0, 0, 0, 0.98);
+    padding: 15px 20px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.navbar-shrink {
+    padding:1px;
+    background: rgba(0, 0, 0, 0.79);
+    opacity: 7.9;
+}
+
+.list-view{
+    margin-top: 10px;
+    font-size: 48px;
+    color: rgba(38, 117, 212, 0.76);
+    float: left;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.list-view-shrink{
+    font-size: 33px;
+}
+
+.ico-qyubix{
+    margin-top: 10px;
+    height:40px;
+    width:100px;
+    float: left;
+    position: relative;
+    top: 8px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    float: left;
+}
+
+.Ico-qyubix-shrink{
+    top:4px;
+    height:30px;
+    width:70px;
+}
+
+.button-cs{
+    margin-top: -10px;
+    hight:100px;
+    color: red;
+    float: right;
+    margin-right:30px ;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.button-cs-shrink{
+    visibility: collapse;
+}
+
+
+
+.space{
+    float: left;
+    width: 10px;
+    color: black;
+}
+
+.space-shrink{
+    color: rgba(0, 0, 0, 0.8);
+}
