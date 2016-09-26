@@ -1,73 +1,155 @@
-.navbar {
-    position: fixed;
-    width: 100%;
-    left: -2px;
-    top: -2px;
-    float: left;
-    background: rgba(0, 0, 0, 0.98);
-    padding: 15px 20px;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-}
+    .navbar {
+        position: fixed;
+        width: 1200px;
+        left: 2px;
+        top: -2px;
+        background: rgba(0, 0, 0, 0.98);
+        padding: 8px 15px;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+    }
 
-.navbar-shrink {
-    padding:1px;
-    background: rgba(0, 0, 0, 0.79);
-    opacity: 7.9;
-}
+    .navbar-shrink {
+        width: 1240px;
+        background: rgba(0, 0, 0, 0.79);
+        opacity: 7.9;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+    }
 
-.list-view{
-    margin-top: 10px;
-    font-size: 48px;
-    color: rgba(38, 117, 212, 0.76);
-    float: left;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-}
+    .ico-qyubix{
+        margin-left:10px;
+        margin-top:10px;
+        height:40px;
+        width:100px;
+        float: left;
+        cursor: pointer;
+        position: relative;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+        float: left;
+    }
 
-.list-view-shrink{
-    font-size: 33px;
-}
+    .ico-qyubix-shrink{
+        margin-top: 10px;
+        height:27px;
+        width:70px;
+    }
 
-.ico-qyubix{
-    margin-top: 10px;
-    height:40px;
-    width:100px;
-    float: left;
-    position: relative;
-    top: 8px;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-    float: left;
-}
+    .search-field {
+        margin-top:10px;
+        margin-left: 190px;
+        border-bottom-color: red;
+        border-right-color: red;
+        border-top-color: black;
+        border-left-color: black;
+        border-bottom-width: 5px;
+        outline:none;
+        height:35px;
+        width:600px;
+        float: left;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+    }
 
-.Ico-qyubix-shrink{
-    top:4px;
-    height:30px;
-    width:70px;
-}
+    .search-field-shrink {
+        margin-left:30px;
+        margin-top: 10px;
+        height:20px;
+        width:350px;
+        border-bottom-width: 2px;
+    }
 
-.button-cs{
-    margin-top: -10px;
-    hight:100px;
-    color: red;
-    float: right;
-    margin-right:30px ;
-    font-family: 'Roboto Condensed', sans-serif;
-}
+    .search-button {
+        margin-top:11px;
+        background: red;
+        right:0;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 43px;
+        width:80px;
+        height:43px;
+        float: left;
+        cursor: pointer;
+        color: #fff;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+        -webkit-user-select: none; /* Chrome/Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none;
+    }
 
-.button-cs-shrink{
-    visibility: collapse;
-}
+    .search-button-shrink {
+        margin-right:100px;
+        margin-top: 12px;
+        line-height: 25px;
+        height: 23px;
+    }
 
+    .search-wrapper:hover  > .search-field {
+        border-bottom-color: #2d34a4;
+        border-right-color: #2d34a4;
+        border-top-color: #2d34a4;
+        border-left-color: #2d34a4;
+    }
 
+    .search-wrapper:hover > .search-button{
+        background: #2d34a4;
+    }
 
-.space{
-    float: left;
-    width: 10px;
-    color: black;
-}
+    .button-bs{
+        margin-top:10px;
+        margin-left: 10px;
+        float: right;
+        border: 0;
+        background: #ff030c;
+        color: #fff;
+        cursor: pointer;
+        outline: 0;
+        padding: 12px 20px;
+        -webkit-transition: all 0.5s;
+        transition: all 0.1s;
+        -webkit-user-select: none; /* Chrome/Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none;
+    }
 
-.space-shrink{
-    color: rgba(0, 0, 0, 0.8);
-}
+    .button-bs-shrink{
+        visibility: hidden;
+        width: 0px;
+        height:0px;
+        margin-left: 0px;
+    }
+
+    .button-bs:hover{
+        background: #2d34a4;
+    }
+    
+    .button-as{
+        visibility: hidden;
+        height:0px;
+        width:0px;
+        margin-right: 0px;
+    }
+
+    .button-as-shrink{
+        margin-right: 20px;
+        margin-top:10px;
+        visibility: visible;
+        background: inherit;
+        color: #fff;
+        float: right;
+        cursor: pointer;
+        height:auto;
+        width:auto;
+        -webkit-transition: all 0.5s;
+        transition: all 2.1s;
+        -webkit-user-select: none; /* Chrome/Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none;
+    }
+    
+    .button-as:hover{
+        color: #ff030c;
+    }
+

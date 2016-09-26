@@ -1,31 +1,38 @@
+<div class="header">
 
+    <div [ngClass]="['navbar', navbarShrink]" track-scroll (scrolled)="onScrolled($event)">
 
-<nav [ngClass]="['navbar', navbarShrink]" track-scroll (scrolled)="onScrolled($event)">
-    <a href="#">
-        <div [ngClass]="['button-cs', buttonCsShrink]" >Customer Service</div>
-    </a>
-    <a href="#">
-        <div [ngClass]="['button-cs', buttonCsShrink]" >Tentang Qyubix</div>
-    </a>
-    <a href="#">
-        <div [ngClass]="['button-cs', buttonCsShrink]" >Download App</div>
-    </a>
-
-    <a href="#">
-        <div [ngClass]="['button-cs', buttonCsShrink]" >LOGIN</div>
-    </a>
-    <a href="#">
-        <div [ngClass]="['button-cs', buttonCsShrink]" >LOGOUT</div>
-    </a>
-
-
-    <a href="#">
-        <span [ngClass]="['list-view','material-icons', listViewShrink]" style="float: left">view_list</span>
-    </a>
-    <div [ngClass]="['space', spaceShrink]">.</div>
-    <a href="#">
         <img [ngClass]="['ico-qyubix', icoQyubixShrink]" src="imagemanagement/logo.png">
-    </a>
-    <div [ngClass]="['space', spaceShrink]">.</div>
-</nav>
+
+        <div class="search-wrapper">
+            <input
+                    type="text"
+                    [ngClass]="['search-field', searchFieldShrink]"
+                    placeholder="Search items..."
+                    (focus)="searchmenu()"
+            />
+            <div [ngClass]="['search-button', searchButtonShrink]">SEARCH</div>
+        </div>
+
+        <div [ngClass]="['button-bs', buttonBsShrink]">LOGIN</div>
+        <div [ngClass]="['button-bs', buttonBsShrink]" >DAFTAR</div>
+        <div [ngClass]="['button-as', buttonAsShrink]" >DAFTAR</div>
+        <div [ngClass]="['button-as', buttonAsShrink]" >LOGIN</div>
+        <div [ngClass]="['button-as', buttonAsShrink]" >KATEGORY</div>
+        <div [ngClass]="['button-as', buttonAsShrink]" >DOWNLOAD OUR APP</div>
+
+    </div>
+
+    <div [ngClass]="['navbar-second',navbarShrinkSecond]" track-scroll (scrolled)="onScrolled($event)">
+        <div class="seperator">&nbsp;</div>
+        <div class="menus">FAVORIT</div>
+        <div class="menus">KATEGORI</div>
+        <div class="menus">MARKET</div>
+        <div class="menus">BLOG</div>
+        <div class="menus">DOWNLOAD OUR APP</div>
+    </div>
+</div>
+
+<div class="searchmenu"  [ngStyle]="{'visibility':visibility}">&nbsp;sdfsd</div>
+
 

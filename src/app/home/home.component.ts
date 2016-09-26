@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {HomeService} from "./home.service";
 import {Home} from "./home";
 
-
 @Component({
   selector: 'home',
   templateUrl: './home.component.html',
