@@ -1,8 +1,8 @@
     .navbar-second {
-        position: fixed;
-        width: 1225px;
+        width: 100%;
         left: 2px;
         top: 65px;
+        overflow: hidden;
         background: rgba(0, 0, 0, 0.98);
         -webkit-transition: all 0.5s;
         transition: all 0s;
@@ -31,16 +31,5 @@
     
     .menus:hover{
         background: blue;
-    }
-
-    .searchmenu{
-        visibility: visible;
-        top: 105px;
-        width:1000px;
-        box-shadow: 1px 1px 5px #888888;
-        height:400px;
-        margin-left: 100px;
-        background: white;
-        position: fixed;
     }
 

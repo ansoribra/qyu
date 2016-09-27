@@ -1,16 +1,23 @@
 <br><br><br><br>
 
-<div *ngFor="let home of homes">
+<div style="width: 100%;">
+  <div class="centerer">
 
-  ==========================================================================================<br>
-  <strong>ID : {{ home.id }}</strong><br>
-  <strong>Product Store Id : {{ home.product_store_id }}</strong><br>
-  <strong>Product Name : {{ home.product_name }}</strong><br>
-  <strong>Product Category : {{ home.product_category }}</strong><br>
-  <strong>Product Price : {{ home.product_price }}</strong><br>
-  <strong>Product Description : {{ home.product_description }}</strong><br>
-  <strong>Product Sold : {{ home.product_sold }}</strong><br>
-  <strong>Product Rating : {{ home.product_rating }}</strong><br>
-  <strong>Product Discount : {{ home.product_discount }}</strong><br>
-  <strong>Product Discount After : {{ home.product_discount_after }}</strong>
+    <div *ngFor="let home of homes">
+
+      ==========================================================================================<br>
+      <strong>ID : {{ home.id }}</strong><br>
+      <strong>Product Store Id : {{ home.product_store_id }}</strong><br>
+      <strong>Product Name : {{ home.product_name }}</strong><br>
+      <strong>Product Category : {{ home.product_category }}</strong><br>
+      <strong>Product Price : {{ home.product_price }}</strong><br>
+      <strong>Product Description : {{ home.product_description }}</strong><br>
+      <strong>Product Sold : {{ home.product_sold }}</strong><br>
+      <strong>Product Rating : {{ home.product_rating }}</strong><br>
+      <strong>Product Discount : {{ home.product_discount }}</strong><br>
+      <strong>Product Discount After : {{ home.product_discount_after }}</strong>
+    </div>
+
+  </div>
 </div>
+

@@ -1,38 +1,33 @@
-<div class="header">
+<div class="mainhead">
+    <div class="centerer">
+        <div class="header">
+            <div [ngClass]="['navbar', navbarShrink]" track-scroll (scrolled)="onScrolled($event)">
+                <img [ngClass]="['ico-qyubix', icoQyubixShrink]" src="imagemanagement/logo.png">
+                <div class="search-wrapper">
+                    <input
+                            type="text"
+                            [ngClass]="['search-field', searchFieldShrink]"
+                            placeholder="Search keywords..."
+                            (focus)="showmenu()"
+                    />
+                    <div [ngClass]="['search-button', searchButtonShrink]">SEARCH</div>
+                </div>
+                <div [ngClass]="['button-bs', buttonBsShrink]">LOGIN</div>
+                <div [ngClass]="['button-bs', buttonBsShrink]" >DAFTAR</div>
+                <div [ngClass]="['button-as', buttonAsShrink]" >DAFTAR</div>
+                <div [ngClass]="['button-as', buttonAsShrink]" >LOGIN</div>
+                <div [ngClass]="['button-as', buttonAsShrink]" >KATEGORY</div>
+                <div [ngClass]="['button-as', buttonAsShrink]" >DOWNLOAD OUR APP</div>
+            </div>
 
-    <div [ngClass]="['navbar', navbarShrink]" track-scroll (scrolled)="onScrolled($event)">
-
-        <img [ngClass]="['ico-qyubix', icoQyubixShrink]" src="imagemanagement/logo.png">
-
-        <div class="search-wrapper">
-            <input
-                    type="text"
-                    [ngClass]="['search-field', searchFieldShrink]"
-                    placeholder="Search items..."
-                    (focus)="searchmenu()"
-            />
-            <div [ngClass]="['search-button', searchButtonShrink]">SEARCH</div>
+            <div [ngClass]="['navbar-second',navbarShrinkSecond]" track-scroll (scrolled)="onScrolled($event)">
+                <div class="seperator">&nbsp;</div>
+                <div class="menus">FAVORIT</div>
+                <div class="menus">KATEGORI</div>
+                <div class="menus">MARKET</div>
+                <div class="menus">BLOG</div>
+                <div class="menus">DOWNLOAD OUR APP</div>
+            </div>
         </div>
-
-        <div [ngClass]="['button-bs', buttonBsShrink]">LOGIN</div>
-        <div [ngClass]="['button-bs', buttonBsShrink]" >DAFTAR</div>
-        <div [ngClass]="['button-as', buttonAsShrink]" >DAFTAR</div>
-        <div [ngClass]="['button-as', buttonAsShrink]" >LOGIN</div>
-        <div [ngClass]="['button-as', buttonAsShrink]" >KATEGORY</div>
-        <div [ngClass]="['button-as', buttonAsShrink]" >DOWNLOAD OUR APP</div>
-
-    </div>
-
-    <div [ngClass]="['navbar-second',navbarShrinkSecond]" track-scroll (scrolled)="onScrolled($event)">
-        <div class="seperator">&nbsp;</div>
-        <div class="menus">FAVORIT</div>
-        <div class="menus">KATEGORI</div>
-        <div class="menus">MARKET</div>
-        <div class="menus">BLOG</div>
-        <div class="menus">DOWNLOAD OUR APP</div>
     </div>
 </div>
-
-<div class="searchmenu"  [ngStyle]="{'visibility':visibility}">&nbsp;sdfsd</div>
-
-

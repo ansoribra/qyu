@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component,Output,EventEmitter } from '@angular/core';
 import { TrackScrollDirective } from '../directives/trackscroll.directive';
+import {SearchpopupComponent} from "../searchpopup/searchpopup.component";
 
 
 @Component({
@@ -29,13 +30,8 @@ export class HeaderComponent {
         this.searchButtonShrink = yPos ? "search-button-shrink" : "";
     }
 
-    visibility:string="hidden";
-
-    searchmenu(){
-        this.visibility= "visible";
-    }
-
-    searchmenuhide(){
-        this.visibility= "hidden";
+    @Output() myEvent = new EventEmitter();
+    showmenu(){
+        this.myEvent.emit(null)
     }
 }
