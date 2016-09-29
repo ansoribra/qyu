@@ -1,16 +1,39 @@
-.searchmenu{
-    visibility: hidden;
-    top: 105px;
-    width:1000px;
-    box-shadow: 1px 1px 5px #888888;
-    height:400px;
-    margin-left: 100px;
-    background: white;
-    position: absolute;
-}
+    .searchmenu{
+        position: fixed;
+        visibility: hidden;
+        top: 60px;
+        width:600px;
+        box-shadow: 1px 1px 5px #888888;
+        max-height: 500px;
+        margin-left: 397px;
+        background: white;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+        overflow-y: auto;
+    }
 
-.centerer {
-    margin:auto;
-    width:1400px;
-    overflow: hidden;
-}
+    .searchmenu-shrink{
+        top: 45px;
+        margin-left: 127px;
+        width:432px;
+    }
+
+    .centerer {
+        margin:auto;
+        width:1400px;
+        overflow: hidden;
+    }
+
+    .searchitem{
+        margin-left: 10px;
+        padding-top:10px;
+    }
+
+    .searchresult:hover{
+        background: rgba(0, 255, 230, 0.21);
+        cursor: pointer;
+        border-style: solid;
+        border-left-color: red;
+        border-left-width:5px;
+    }
+

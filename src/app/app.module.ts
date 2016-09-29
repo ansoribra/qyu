@@ -13,10 +13,11 @@ import { HomeComponent } from './home/home.component';
 import {HeaderComponent} from "./home/header/header.component";
 import { TrackScrollDirective } from "./home/directives/trackscroll.directive";
 import { SearchpopupComponent } from './home/searchpopup/searchpopup.component';
+import { SearchPipe } from './search.pipe';
 
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, HeaderComponent,TrackScrollDirective, SearchpopupComponent],
+  declarations: [AppComponent, HomeComponent, HeaderComponent,TrackScrollDirective, SearchpopupComponent, SearchPipe],
   imports: [BrowserModule, FormsModule, HttpModule, MdCardModule,MdButtonModule,MdIconModule,MdInputModule],
   bootstrap: [AppComponent],
   providers: [MdIconRegistry]

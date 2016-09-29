@@ -14,9 +14,6 @@ export class HomeComponent implements OnInit {
   constructor (private homeService: HomeService) {
   }
 
-
-  public satu: string = "http://localhost:8080/product";
-
   ngOnInit() { this.getHomes(); }
 
   getHomes() {
@@ -25,5 +22,4 @@ export class HomeComponent implements OnInit {
             homes => this.homes = homes.content,
             error =>  this.errorMessage = <any>error);
   }
-
 }

@@ -8,7 +8,9 @@
                             type="text"
                             [ngClass]="['search-field', searchFieldShrink]"
                             placeholder="Search keywords..."
+                            [(ngModel)]="term"
                             (focus)="showmenu()"
+                            (ngModelChange)="onChange($event)"
                     />
                     <div [ngClass]="['search-button', searchButtonShrink]">SEARCH</div>
                 </div>
@@ -31,3 +33,4 @@
         </div>
     </div>
 </div>
+

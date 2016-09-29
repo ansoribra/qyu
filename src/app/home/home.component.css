@@ -3,3 +3,43 @@
     width:1200px;
     top:-10px;
 }
+
+.borderproduct{
+    float: right;
+    border-style: solid;
+    border-width: 2px;
+    border-color: transparent;
+    display: inline-block;
+    width: 250px;
+    height: 300px;
+    text-align:center;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px #888888;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.borderproduct:hover{
+    border-color: blue;
+
+}
+
+.borderproduct img{
+    padding-top:15px;
+    margin:auto;
+}
+
+.prodname{
+    margin-top:10px;
+    margin-left:10px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size:15px;
+}
+
+.prodprice{
+    margin-left:10px;
+}
+
+.butproduct{
+    text-align: left;
+}

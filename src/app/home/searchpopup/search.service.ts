@@ -1,17 +1,17 @@
 import { Injectable }     from '@angular/core';
 import { Http, Response } from '@angular/http';
-import { Home }           from './home';
+import { Home }           from './../home';
 import { Observable }     from 'rxjs/Observable';
 import 'rxjs/Rx';
 
 @Injectable()
-export class HomeService {
+export class SearchService {
     constructor (private http: Http) {}
 
-    private homesUrl = 'http://localhost:8080/product?size=500';  // URL to web API
+    private Url = 'http://localhost:8080/product?size=2000';  // URL to web API
 
-    getHomes (){
-        return this.http.get(this.homesUrl)
+    getService (){
+        return this.http.get(this.Url)
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }

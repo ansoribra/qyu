@@ -1,21 +1,14 @@
-<br><br><br><br>
+<br><br><br><br><br><br>
 
 <div style="width: 100%;">
   <div class="centerer">
 
-    <div *ngFor="let home of homes">
-
-      ==========================================================================================<br>
-      <strong>ID : {{ home.id }}</strong><br>
-      <strong>Product Store Id : {{ home.product_store_id }}</strong><br>
-      <strong>Product Name : {{ home.product_name }}</strong><br>
-      <strong>Product Category : {{ home.product_category }}</strong><br>
-      <strong>Product Price : {{ home.product_price }}</strong><br>
-      <strong>Product Description : {{ home.product_description }}</strong><br>
-      <strong>Product Sold : {{ home.product_sold }}</strong><br>
-      <strong>Product Rating : {{ home.product_rating }}</strong><br>
-      <strong>Product Discount : {{ home.product_discount }}</strong><br>
-      <strong>Product Discount After : {{ home.product_discount_after }}</strong>
+    <div class="borderproduct" *ngFor="let home of homes">
+      <img width="200px" height="200px" src="http://localhost:8080/images/{{home.product_store_id}}/{{ home.id }}.jpg"><br>
+      <div class="butproduct">
+        <div class="prodname">{{ home.product_name }}</div>
+        <div class="prodprice">{{ home.product_price | currency:'IDR'}}</div>
+      </div>
     </div>
 
   </div>

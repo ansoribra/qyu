@@ -2,14 +2,13 @@ import { Component,Output,EventEmitter } from '@angular/core';
 import { TrackScrollDirective } from '../directives/trackscroll.directive';
 import {SearchpopupComponent} from "../searchpopup/searchpopup.component";
 
-
 @Component({
     selector:'header',
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.css','./header2.component.css'],
 })
 export class HeaderComponent {
-
+    term:string;
     navbarShrink : string = '';
     navbarShrinkSecond : string = '';
     icoQyubixShrink : string = '';
@@ -32,6 +31,11 @@ export class HeaderComponent {
 
     @Output() myEvent = new EventEmitter();
     showmenu(){
-        this.myEvent.emit(null)
+        this.myEvent.emit(null);
+    }
+
+    @Output() searchemit: EventEmitter<string> = new EventEmitter<string>();
+    onChange($event){
+        this.searchemit.emit(this.term);
     }
 }
