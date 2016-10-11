@@ -1,6 +1,4 @@
 import { Component,Output,EventEmitter } from '@angular/core';
-import { TrackScrollDirective } from '../directives/trackscroll.directive';
-import {SearchpopupComponent} from "../searchpopup/searchpopup.component";
 
 @Component({
     selector:'header',
@@ -29,13 +27,26 @@ export class HeaderComponent {
         this.searchButtonShrink = yPos ? "search-button-shrink" : "";
     }
 
-    @Output() myEvent = new EventEmitter();
+    @Output() showMenu = new EventEmitter();
+    @Output() hideMenu = new EventEmitter();
+
     showmenu(){
-        this.myEvent.emit(null);
+        //noinspection TypeScriptUnresolvedFunction
+        this.showMenu.emit(null);
+    }
+
+    hidemenu(){
+        //noinspection TypeScriptUnresolvedFunction
+        this.hideMenu.emit(null);
     }
 
     @Output() searchemit: EventEmitter<string> = new EventEmitter<string>();
-    onChange($event){
+    onChange(){
         this.searchemit.emit(this.term);
+        if (this.term===''){
+            this.hidemenu();
+        }else {
+            this.showmenu()
+        }
     }
 }

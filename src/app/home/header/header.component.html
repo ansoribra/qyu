@@ -7,10 +7,9 @@
                     <input
                             type="text"
                             [ngClass]="['search-field', searchFieldShrink]"
-                            placeholder="Search keywords..."
+                            placeholder=" Search keywords..."
                             [(ngModel)]="term"
-                            (focus)="showmenu()"
-                            (ngModelChange)="onChange($event)"
+                            (ngModelChange)="onChange()"
                     />
                     <div [ngClass]="['search-button', searchButtonShrink]">SEARCH</div>
                 </div>

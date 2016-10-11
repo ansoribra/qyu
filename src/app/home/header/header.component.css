@@ -1,4 +1,3 @@
-
     .mainhead{
         top:0px;
         position: fixed;
@@ -30,7 +29,7 @@
     }
 
     .ico-qyubix{
-        margin-left:10px;
+        margin-left:50px;
         margin-top:10px;
         height:40px;
         width:100px;
@@ -48,7 +47,7 @@
 
     .search-field {
         margin-top:10px;
-        margin-left: 270px;
+        margin-left: 100px;
         border-bottom-color: red;
         border-right-color: red;
         border-top-color: black;
@@ -96,18 +95,18 @@
     }
 
     .search-wrapper:hover  > .search-field {
-        border-bottom-color: #2d34a4;
-        border-right-color: #2d34a4;
-        border-top-color: #2d34a4;
-        border-left-color: #2d34a4;
+        border-bottom-color: #6083ff;
+        border-right-color: #6083ff;
+        border-top-color: #6083ff;
+        border-left-color: #6083ff;
     }
 
     .search-wrapper:hover > .search-button{
-        background: #2d34a4;
+        background: #6083ff;
     }
 
     .button-bs{
-        margin-top:10px;
+        margin-top:11px;
         margin-left: 10px;
         float: left;
         border: 0;
@@ -115,7 +114,7 @@
         color: #fff;
         cursor: pointer;
         outline: 0;
-        padding: 12px 20px;
+        padding: 13px 20px;
         -webkit-transition: all 0.5s;
         transition: all 0.1s;
         -webkit-user-select: none; /* Chrome/Safari */
@@ -131,7 +130,7 @@
     }
 
     .button-bs:hover{
-        background: #2d34a4;
+        background: #6083ff;
     }
     
     .button-as{
@@ -145,7 +144,7 @@
         margin-right: 20px;
         margin-top:10px;
         visibility: visible;
-        background: inherit;
+        background: transparent;
         color: #fff;
         float: left;
         cursor: pointer;
@@ -159,6 +158,6 @@
     }
     
     .button-as:hover{
-        color: #ff030c;
+        color: blue;
     }
 

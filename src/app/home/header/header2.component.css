@@ -21,7 +21,7 @@
     .menus{
         padding:5px;
         float: left;
-        margin-left:10px;
+        margin-left:55px;
         color: whitesmoke;
         cursor: pointer;
         -webkit-user-select: none; /* Chrome/Safari */
@@ -30,6 +30,6 @@
     }
     
     .menus:hover{
-        background: blue;
+        background: #6083ff;
     }
 

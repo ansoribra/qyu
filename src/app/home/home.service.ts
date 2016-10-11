@@ -8,7 +8,7 @@ import 'rxjs/Rx';
 export class HomeService {
     constructor (private http: Http) {}
 
-    private homesUrl = 'http://localhost:8080/product?size=500';  // URL to web API
+    private homesUrl = 'http://localhost:8090/product?product_category=computer&size=500';  // URL to web API
 
     getHomes (){
         return this.http.get(this.homesUrl)

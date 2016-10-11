@@ -14,11 +14,17 @@ import {HeaderComponent} from "./home/header/header.component";
 import { TrackScrollDirective } from "./home/directives/trackscroll.directive";
 import { SearchpopupComponent } from './home/searchpopup/searchpopup.component';
 import { SearchPipe } from './search.pipe';
+import { AppRoutesModule, routingComponents } from './app.routes';
+import {Ng2PageScrollModule} from 'ng2-page-scroll';
+import { SeemoreComponent } from './seemore/seemore.component';
+import { MidrouteComponent } from './midroute/midroute.component';
+
+
 
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, HeaderComponent,TrackScrollDirective, SearchpopupComponent, SearchPipe],
-  imports: [BrowserModule, FormsModule, HttpModule, MdCardModule,MdButtonModule,MdIconModule,MdInputModule],
+  declarations: [AppComponent, HomeComponent, HeaderComponent,TrackScrollDirective, SearchpopupComponent, SearchPipe,routingComponents, SeemoreComponent, MidrouteComponent],
+  imports: [BrowserModule, FormsModule, HttpModule, MdCardModule,MdButtonModule,MdIconModule,MdInputModule,Ng2PageScrollModule,AppRoutesModule],
   bootstrap: [AppComponent],
   providers: [MdIconRegistry]
 })

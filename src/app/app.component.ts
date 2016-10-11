@@ -7,6 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class AppComponent {
   searchValue:string;
+  visibility:string='visible';
   searchCalled(message:string):void{
     this.searchValue=message;
   }

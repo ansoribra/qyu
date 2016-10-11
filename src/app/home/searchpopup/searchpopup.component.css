@@ -5,7 +5,7 @@
         width:600px;
         box-shadow: 1px 1px 5px #888888;
         max-height: 500px;
-        margin-left: 397px;
+        margin-left: 325px;
         background: white;
         -webkit-transition: all 0.5s;
         transition: all 0.5s;
@@ -30,7 +30,7 @@
     }
 
     .searchresult:hover{
-        background: rgba(0, 255, 230, 0.21);
+        background: #6083ff;
         cursor: pointer;
         border-style: solid;
         border-left-color: red;

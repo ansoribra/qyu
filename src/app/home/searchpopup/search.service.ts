@@ -8,7 +8,7 @@ import 'rxjs/Rx';
 export class SearchService {
     constructor (private http: Http) {}
 
-    private Url = 'http://localhost:8080/product?size=2000';  // URL to web API
+    private Url = 'http://localhost:8090/product?size=2000';  // URL to web API
 
     getService (){
         return this.http.get(this.Url)

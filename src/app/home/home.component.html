@@ -1,16 +1,251 @@
-<br><br><br><br><br><br>
-
 <div style="width: 100%;">
   <div class="centerer">
 
-    <div class="borderproduct" *ngFor="let home of homes">
-      <img width="200px" height="200px" src="http://localhost:8080/images/{{home.product_store_id}}/{{ home.id }}.jpg"><br>
-      <div class="butproduct">
-        <div class="prodname">{{ home.product_name }}</div>
-        <div class="prodprice">{{ home.product_price | currency:'IDR'}}</div>
+      <div [ngClass]="['categorysidebarfix', catgorsidfixShrink]" track-scroll (scrolled)="onScrolled($event)">
+        <div class="line-separator"></div>
+        CATEGORY
+        <div class="line-separator"></div>
+        <div class="category">
+          <a  href="#computer"><div class="cat">Computer</div></a>
+          <a href="#beauty"><div class="cat">Beauty</div></a>
+          <a href="#book"><div class="cat">Book</div></a>
+          <a href="#clothing"><div class="cat">Clothing</div></a>
+          <a href="#game"><div class="cat">Games</div></a>
+          <a href="#garden"><div class="cat">Garden</div></a>
+          <a href="#health"><div class="cat">Health</div></a>
+          <a href="#home"><div class="cat">Home</div></a>
+          <a href="#jewelery"><div class="cat">Jewelery</div></a>
+          <a href="#kid"><div class="cat">Kid</div></a>
+          <a href="#movie"><div class="cat">Movie</div></a>
+          <a href="#outdor"><div class="cat">Outdor</div></a>
+          <a href="#shoe"><div class="cat">Shoes</div></a>
+          <a href="#sport"><div class="cat">Sport</div></a>
+        </div>
+      </div>
+
+      <div class="anchor" id="computer">ansor</div>
+      <div class="contentcomputer">
+        <div>
+          <div class="prodhead">PRODUCT COMPUTER</div>
+          <a [routerLink]="['home']"><div class="seemore">See Other Products</div></a></div><br><br>
+        <div class="line-separator"></div>
+        <div class="borderproduct" *ngFor="let computer of computers">
+          <img width="150px" height="150px" src="http://localhost:8090/images/{{computer.product_store_id}}/{{ computer.id }}.jpg"/><br>
+          <div class="butproduct">
+            <div class="prodname">{{ computer.product_name }}</div>
+            <div class="prodprice">RP: {{ computer.product_price | currency:'IDR'|slice:3}}</div>
+          </div>
+        </div>
+      </div>
+
+    <div class="anchor" id="beauty">ansor</div>
+    <div class="contentcomputer" >
+      <div>
+        <div class="prodhead">PRODUCT BEAUTY</div>
+        <a [routerLink]="['seemore']"><div class="seemore">See Other Products</div></a></div><br><br>
+      <div class="line-separator"></div>
+      <div class="borderproduct" *ngFor="let beauty of beauties">
+        <img width="150px" height="150px" src="http://localhost:8090/images/{{beauty.product_store_id}}/{{ beauty.id }}.jpg"/><br>
+        <div class="butproduct">
+          <div class="prodname">{{ beauty.product_name }}</div>
+          <div class="prodprice">RP: {{ beauty.product_price | currency:'IDR'|slice:3}}</div>
+        </div>
       </div>
     </div>
 
+    <div class="anchor" id="book">ansor</div>
+    <div class="contentcomputer" >
+      <div>
+        <div class="prodhead">PRODUCT BOOK</div>
+        <div class="seemore">See Other Products</div></div><br><br>
+      <div class="line-separator"></div>
+      <div class="borderproduct" *ngFor="let book of books">
+        <img width="150px" height="150px" src="http://localhost:8090/images/{{book.product_store_id}}/{{ book.id }}.jpg"/><br>
+        <div class="butproduct">
+          <div class="prodname">{{ book.product_name }}</div>
+          <div class="prodprice">RP: {{ book.product_price | currency:'IDR'|slice:3}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="anchor" id="clothing">ansor</div>
+    <div class="contentcomputer" >
+      <div>
+        <div class="prodhead">PRODUCT CLOTHING</div>
+        <div class="seemore">See Other Products</div></div><br><br>
+      <div class="line-separator"></div>
+      <div class="borderproduct" *ngFor="let clothing of clothings">
+        <img width="150px" height="150px" src="http://localhost:8090/images/{{clothing.product_store_id}}/{{ clothing.id }}.jpg"/><br>
+        <div class="butproduct">
+          <div class="prodname">{{ clothing.product_name }}</div>
+          <div class="prodprice">RP: {{ clothing.product_price | currency:'IDR'|slice:3}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="anchor" id="shoe">ansor</div>
+    <div class="contentcomputer" >
+      <div>
+        <div class="prodhead">PRODUCT SHOES</div>
+        <div class="seemore">See Other Products</div></div><br><br>
+      <div class="line-separator"></div>
+      <div class="borderproduct" *ngFor="let shoe of shoes">
+        <img width="150px" height="150px" src="http://localhost:8090/images/{{shoe.product_store_id}}/{{ shoe.id }}.jpg"/><br>
+        <div class="butproduct">
+          <div class="prodname">{{ shoe.product_name }}</div>
+          <div class="prodprice">RP: {{ shoe.product_price | currency:'IDR'|slice:3}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="anchor" id="electronic">ansor</div>
+    <div class="contentcomputer" >
+      <div>
+        <div class="prodhead">PRODUCT ELEKTRONIK</div>
+        <div class="seemore">See Other Products</div></div><br><br>
+      <div class="line-separator"></div>
+      <div class="borderproduct" *ngFor="let electronic of electronics">
+        <img width="150px" height="150px" src="http://localhost:8090/images/{{electronic.product_store_id}}/{{ electronic.id }}.jpg"/><br>
+        <div class="butproduct">
+          <div class="prodname">{{ electronic.product_name }}</div>
+          <div class="prodprice">RP: {{ electronic.product_price | currency:'IDR'|slice:3}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="anchor" id="game">ansor</div>
+    <div class="contentcomputer" >
+      <div>
+        <div class="prodhead">PRODUCT GAMES</div>
+        <div class="seemore">See Other Products</div></div><br><br>
+      <div class="line-separator"></div>
+      <div class="borderproduct" *ngFor="let game of games">
+        <img width="150px" height="150px" src="http://localhost:8090/images/{{game.product_store_id}}/{{ game.id }}.jpg"/><br>
+        <div class="butproduct">
+          <div class="prodname">{{ game.product_name }}</div>
+          <div class="prodprice">RP: {{ game.product_price | currency:'IDR'|slice:3}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="anchor" id="garden">ansor</div>
+    <div class="contentcomputer" >
+      <div>
+        <div class="prodhead">PRODUCT GARDEN</div>
+        <div class="seemore">See Other Products</div></div><br><br>
+      <div class="line-separator"></div>
+      <div class="borderproduct" *ngFor="let garden of gardens">
+        <img width="150px" height="150px" src="http://localhost:8090/images/{{garden.product_store_id}}/{{ garden.id }}.jpg"/><br>
+        <div class="butproduct">
+          <div class="prodname">{{ garden.product_name }}</div>
+          <div class="prodprice">RP: {{ garden.product_price | currency:'IDR'|slice:3}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="anchor" id="health">ansor</div>
+    <div class="contentcomputer" >
+      <div>
+        <div class="prodhead">PRODUCT HEALTH</div>
+        <div class="seemore">See Other Products</div></div><br><br>
+      <div class="line-separator"></div>
+      <div class="borderproduct" *ngFor="let health of healths">
+        <img width="150px" height="150px" src="http://localhost:8090/images/{{health.product_store_id}}/{{ health.id }}.jpg"/><br>
+        <div class="butproduct">
+          <div class="prodname">{{ health.product_name }}</div>
+          <div class="prodprice">RP: {{ health.product_price | currency:'IDR'|slice:3}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="anchor" id="home">ansor</div>
+    <div class="contentcomputer" >
+      <div>
+        <div class="prodhead">PRODUCT HOME</div>
+        <div class="seemore">See Other Products</div></div><br><br>
+      <div class="line-separator"></div>
+      <div class="borderproduct" *ngFor="let home of homes">
+        <img width="150px" height="150px" src="http://localhost:8090/images/{{home.product_store_id}}/{{ home.id }}.jpg"/><br>
+        <div class="butproduct">
+          <div class="prodname">{{ home.product_name }}</div>
+          <div class="prodprice">RP: {{ home.product_price | currency:'IDR'|slice:3}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="anchor" id="jewelery">ansor</div>
+    <div class="contentcomputer" >
+      <div>
+        <div class="prodhead">PRODUCT JEWELERY</div>
+        <div class="seemore">See Other Products</div></div><br><br>
+      <div class="line-separator"></div>
+      <div class="borderproduct" *ngFor="let jewelery of jeweleries">
+        <img width="150px" height="150px" src="http://localhost:8090/images/{{jewelery.product_store_id}}/{{ jewelery.id }}.jpg"/><br>
+        <div class="butproduct">
+          <div class="prodname">{{ jewelery.product_name }}</div>
+          <div class="prodprice">RP: {{ jewelery.product_price | currency:'IDR'|slice:3}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="anchor" id="kid">ansor</div>
+    <div class="contentcomputer" >
+      <div>
+        <div class="prodhead">PRODUCT KIDS</div>
+        <div class="seemore">See Other Products</div></div><br><br>
+      <div class="line-separator"></div>
+      <div class="borderproduct" *ngFor="let kid of kids">
+        <img width="150px" height="150px" src="http://localhost:8090/images/{{kid.product_store_id}}/{{ kid.id }}.jpg"/><br>
+        <div class="butproduct">
+          <div class="prodname">{{ kid.product_name }}</div>
+          <div class="prodprice">RP: {{ kid.product_price | currency:'IDR'|slice:3}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="anchor" id="movie">ansor</div>
+    <div class="contentcomputer" >
+      <div>
+        <div class="prodhead">PRODUCT MOVIE</div>
+        <div class="seemore">See Other Products</div></div><br><br>
+      <div class="line-separator"></div>
+      <div class="borderproduct" *ngFor="let movie of movies">
+        <img width="150px" height="150px" src="http://localhost:8090/images/{{movie.product_store_id}}/{{ movie.id }}.jpg"/><br>
+        <div class="butproduct">
+          <div class="prodname">{{ movie.product_name }}</div>
+          <div class="prodprice">RP: {{ movie.product_price | currency:'IDR'|slice:3}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="anchor" id="outdor">ansor</div>
+    <div class="contentcomputer" >
+      <div>
+        <div class="prodhead">PRODUCT OUTDORS</div>
+        <div class="seemore">See Other Products</div></div><br><br>
+      <div class="line-separator"></div>
+      <div class="borderproduct" *ngFor="let outdoor of outdoors">
+        <img width="150px" height="150px" src="http://localhost:8090/images/{{outdoor.product_store_id}}/{{ outdoor.id }}.jpg"/><br>
+        <div class="butproduct">
+          <div class="prodname">{{ outdoor.product_name }}</div>
+          <div class="prodprice">RP: {{ outdoor.product_price | currency:'IDR'|slice:3}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="anchor" id="sport">ansor</div>
+    <div class="contentcomputer" >
+      SPORT
+      <div class="line-separator"></div>
+      <div class="borderproduct" *ngFor="let sport of sports">
+        <img width="150px" height="150px" src="http://localhost:8090/images/{{sport.product_store_id}}/{{ sport.id }}.jpg"/><br>
+        <div class="butproduct">
+          <div class="prodname">{{ sport.product_name }}</div>
+          <div class="prodprice">RP: {{ sport.product_price | currency:'IDR'|slice:3}}</div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
+<router-outlet></router-outlet>
