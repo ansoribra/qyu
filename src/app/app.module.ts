@@ -18,12 +18,13 @@ import { AppRoutesModule, routingComponents } from './app.routes';
 import {Ng2PageScrollModule} from 'ng2-page-scroll';
 import { SeemoreComponent } from './seemore/seemore.component';
 import { MidrouteComponent } from './midroute/midroute.component';
+import { SidecategoryComponent } from './sidecategory/sidecategory.component';
 
 
 
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, HeaderComponent,TrackScrollDirective, SearchpopupComponent, SearchPipe,routingComponents, SeemoreComponent, MidrouteComponent],
+  declarations: [AppComponent, HomeComponent, HeaderComponent,TrackScrollDirective, SearchpopupComponent, SearchPipe,routingComponents, SeemoreComponent, MidrouteComponent, SidecategoryComponent],
   imports: [BrowserModule, FormsModule, HttpModule, MdCardModule,MdButtonModule,MdIconModule,MdInputModule,Ng2PageScrollModule,AppRoutesModule],
   bootstrap: [AppComponent],
   providers: [MdIconRegistry]

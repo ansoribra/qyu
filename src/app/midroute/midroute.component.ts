@@ -5,11 +5,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './midroute.component.html',
   styleUrls: ['./midroute.component.css']
 })
-export class MidrouteComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+export class MidrouteComponent {
+  searchValue:string;
+  visibility:string='visible';
+  searchCalled(message:string):void{
+    this.searchValue=message;
   }
-
 }

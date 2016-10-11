@@ -26,11 +26,6 @@ export class HomeComponent implements OnInit {
   outdoors: Home[];
   sports: Home[];
 
-  catgorsidfixShrink : string='';
-
-  onScrolled(yPos : number) {
-    this.catgorsidfixShrink = yPos ? "catgorsidfixShrink" : "";
-  }
   constructor (private categoryService: CategoryService) {
   }
 

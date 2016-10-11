@@ -24,6 +24,22 @@ export class CategoryService {
     private outdoorsUrl = 'http://localhost:8090/product?product_category=outdoors&size=12&page=0';
     private sportUrl = 'http://localhost:8090/product?product_category=sport&size=12&page=0';
 
+    private computerUrlfull = 'http://localhost:8090/product?product_category=computer&size=160&page=0';  // URL to web API
+    private beautyUrlfull = 'http://localhost:8090/product?product_category=beauty&size=160&page=0';
+    private bookUrlfull = 'http://localhost:8090/product?product_category=book&size=160&page=0';
+    private clothingUrlfull = 'http://localhost:8090/product?product_category=clothing&size=160&page=0';
+    private shoesUrlfull = 'http://localhost:8090/product?product_category=shoes&size=160&page=0';
+    private electronicUrlfull = 'http://localhost:8090/product?product_category=electronic&size=160&page=0';
+    private gamesUrlfull = 'http://localhost:8090/product?product_category=games&size=160&page=0';
+    private gardenUrlfull = 'http://localhost:8090/product?product_category=garden&size=160&page=0';
+    private healthUrlfull = 'http://localhost:8090/product?product_category=health&size=160&page=0';
+    private homeUrlfull = 'http://localhost:8090/product?product_category=home&size=160&page=0';
+    private jeweleryUrlfull = 'http://localhost:8090/product?product_category=jewelery&size=160&page=0';
+    private kidsUrlfull = 'http://localhost:8090/product?product_category=kids&size=160&page=0';
+    private moviesUrlfull = 'http://localhost:8090/product?product_category=movies&size=160&page=0';
+    private outdoorsUrlfull = 'http://localhost:8090/product?product_category=outdoors&size=160&page=0';
+    private sportUrlfull = 'http://localhost:8090/product?product_category=sport&size=160&page=0';
+
     getComputer (){
         return this.http.get(this.computerUrl)
             .map(res => <Home[]> res.json())
@@ -114,6 +130,95 @@ export class CategoryService {
             .catch(this.handleError);
     }
 
+    getComputerFull (){
+        return this.http.get(this.computerUrlfull)
+            .map(res => <Home[]> res.json())
+            .catch(this.handleError);
+    }
+
+    getBeautyFull (){
+        return this.http.get(this.beautyUrlfull)
+            .map(res => <Home[]> res.json())
+            .catch(this.handleError);
+    }
+
+    getBookFull (){
+        return this.http.get(this.bookUrlfull)
+            .map(res => <Home[]> res.json())
+            .catch(this.handleError);
+    }
+
+    getClothingFull (){
+        return this.http.get(this.clothingUrlfull)
+            .map(res => <Home[]> res.json())
+            .catch(this.handleError);
+    }
+
+    getShoesFull (){
+        return this.http.get(this.shoesUrlfull)
+            .map(res => <Home[]> res.json())
+            .catch(this.handleError);
+    }
+
+    getElectronicFull (){
+        return this.http.get(this.electronicUrlfull)
+            .map(res => <Home[]> res.json())
+            .catch(this.handleError);
+    }
+
+    getGamesFull (){
+        return this.http.get(this.gamesUrlfull)
+            .map(res => <Home[]> res.json())
+            .catch(this.handleError);
+    }
+
+    getGardenFull (){
+        return this.http.get(this.gardenUrlfull)
+            .map(res => <Home[]> res.json())
+            .catch(this.handleError);
+    }
+
+    getHealthFull (){
+        return this.http.get(this.healthUrlfull)
+            .map(res => <Home[]> res.json())
+            .catch(this.handleError);
+    }
+
+    getJeweleryFull (){
+        return this.http.get(this.jeweleryUrlfull)
+            .map(res => <Home[]> res.json())
+            .catch(this.handleError);
+    }
+
+    getKidsFull (){
+        return this.http.get(this.kidsUrlfull)
+            .map(res => <Home[]> res.json())
+            .catch(this.handleError);
+    }
+
+    getMoviesFull (){
+        return this.http.get(this.moviesUrlfull)
+            .map(res => <Home[]> res.json())
+            .catch(this.handleError);
+    }
+
+    getOutdoorsFull (){
+        return this.http.get(this.outdoorsUrlfull)
+            .map(res => <Home[]> res.json())
+            .catch(this.handleError);
+    }
+
+    getSportFull (){
+        return this.http.get(this.sportUrlfull)
+            .map(res => <Home[]> res.json())
+            .catch(this.handleError);
+    }
+
+    getHomeFull (){
+        return this.http.get(this.homeUrlfull)
+            .map(res => <Home[]> res.json())
+            .catch(this.handleError);
+    }
 
     private extractData(res: Response) {
         let body = res.json();
