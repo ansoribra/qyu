@@ -91,7 +91,6 @@ a:link {
     color: black;
 }
 
-/* visited link */
 a:visited {
     text-decoration: none;
     color: black;
@@ -114,4 +113,32 @@ a:active {
     height: 50px;
     width:1000px;
     visibility: hidden;
+}
+
+
+.nextpage, .prevpage{
+    background: rgba(255, 0, 0, 0.46);
+    float: left;
+    color: white;
+    padding:10px;
+    cursor: pointer;
+    margin-right:3px;
+}
+
+.refferednumber{
+    background: rgba(255, 0, 0, 0.46);
+    float: left;
+    color: white;
+    padding:10px;
+    cursor: pointer;
+    margin-right:3px;
+}
+
+#refferednumber0{
+    background: red;
+    float: left;
+    color: white;
+    padding:10px;
+    cursor: pointer;
+    margin-right:3px;
 }

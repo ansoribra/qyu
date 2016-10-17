@@ -11,6 +11,35 @@
   
 </head>
 <body style="margin-left: -2px; padding: 0px; align:0px; ">
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '444203202416586',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    FB.getLoginStatus(function (response) {
+      if(response.status === 'connected'){
+          alert("wow")
+      }else if(response.status==='not_authorized'){
+        alert("nggak wow")
+      }else{
+        alert("nggak wow")
+      }
+    });
+  };
+
+  (function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
   <app-root ><div class="loader"/></app-root >
+<div id="status"></div>
 </body>
 </html>
+

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Home} from "./home";
 import {CategoryService} from "./category.service";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'home',
@@ -8,6 +9,7 @@ import {CategoryService} from "./category.service";
   styleUrls: ['./home.component.css'],
   providers: [CategoryService]
 })
+
 export class HomeComponent implements OnInit {
   errorMessage: string;
   computers: Home[];
