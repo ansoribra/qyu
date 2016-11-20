@@ -1,8 +1,9 @@
 import { Component, OnInit,Input } from '@angular/core';
-import {HomeService} from "../home.service";
-import {Home} from "../home";
-import {SearchService} from "./search.service";
+import {HomeService} from "../home/home.service";
+import {Home} from "../home/home";
+import {SearchService} from "./search.service.ts";
 import 'rxjs/Rx';
+
 
 
 @Component({
@@ -13,14 +14,6 @@ import 'rxjs/Rx';
 })
 
 export class SearchpopupComponent implements OnInit {
-
-  ninjas =[
-    {name:'anzary melah', belt:'red'},
-    {name:'zae', belt:'black'},
-    {name:'aleel', belt:'blue'},
-    {name:'sonny', belt:'green'},
-    {name:'dany', belt:'green'}
-  ];
 
   ees='ee';
 

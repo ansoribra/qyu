@@ -2,7 +2,7 @@
     <div class="centerer">
         <div [ngClass]="['searchmenu', searchMenuShrink]"  track-scroll (scrolled)="onScrolled($event)" [ngStyle]="{'visibility':visibility}">
             <div class="searchresult" *ngFor="let service of services |search:term ">
-                <div class="searchitem">ID : {{ service.id }}</div><br>
+                <div [routerLink]="['/searchresult',service.product_name]" class="searchitem">ID : {{ service.product_name }}</div><br>
             </div>
         </div>
     </div>

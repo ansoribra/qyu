@@ -10,9 +10,9 @@ import {MdIconModule,MdIconRegistry} from '@angular2-material/icon';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import {HeaderComponent} from "./home/header/header.component";
+import {HeaderComponent} from "./header/header.component";
 import { TrackScrollDirective } from "./home/directives/trackscroll.directive";
-import { SearchpopupComponent } from './home/searchpopup/searchpopup.component';
+import { SearchpopupComponent } from './searchpopup/searchpopup.component';
 import { SearchPipe } from './search.pipe';
 import { AppRoutesModule, routingComponents } from './app.routes';
 import {Ng2PageScrollModule} from 'ng2-page-scroll';
@@ -20,12 +20,15 @@ import { SeemoreComponent } from './seemore/seemore.component';
 import { MidrouteComponent } from './midroute/midroute.component';
 import { SidecategoryComponent } from './sidecategory/sidecategory.component';
 import { PagingComponent } from './paging/paging.component';
+import {enableProdMode} from '@angular/core';
+import { DetailprodComponent } from './detailprod/detailprod.component';
+import { SearchresultComponent } from './searchresult/searchresult.component';
 
 
 
-
+enableProdMode();
 @NgModule({
-  declarations: [AppComponent, HomeComponent, HeaderComponent,TrackScrollDirective, SearchpopupComponent, SearchPipe,routingComponents, SeemoreComponent, MidrouteComponent, SidecategoryComponent, PagingComponent],
+  declarations: [AppComponent, HomeComponent, HeaderComponent,TrackScrollDirective, SearchpopupComponent, SearchPipe,routingComponents, SeemoreComponent, MidrouteComponent, SidecategoryComponent, PagingComponent, DetailprodComponent, SearchresultComponent],
   imports: [BrowserModule, FormsModule, HttpModule, MdCardModule,MdButtonModule,MdIconModule,MdInputModule,Ng2PageScrollModule,AppRoutesModule],
   bootstrap: [AppComponent],
   providers: [MdIconRegistry]

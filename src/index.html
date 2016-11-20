@@ -8,11 +8,12 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <reference path="typings/globals/index.d.ts" />
+  <link rel="stylesheet" type="text/css" href="styles.css">
   
 </head>
-<body style="margin-left: -2px; padding: 0px; align:0px; ">
+<body style="margin-left: 0px; left: 0px;  align-left: 0px;">
 <script>
-  window.fbAsyncInit = function() {
+ /* window.fbAsyncInit = function() {
     FB.init({
       appId      : '444203202416586',
       xfbml      : true,
@@ -36,9 +37,36 @@
     js.src = "//connect.facebook.net/en_US/sdk.js";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
+
+  function login(){
+    FB.login(function (response) {
+      if(response.status === 'connected'){
+        alert("wow")
+      }else if(response.status==='not_authorized'){
+        alert("nggak wow")
+      }else{
+        alert("nggak wow")
+      }
+    });
+    FB.api('/me','GET',{fields:'first_name,last_name,name,id,age_range'}, function(response){
+      alert(response.id+"==="+response.first_name+"===="+response.last_name+"==="+response.name+"====="+response.age_range);
+    });
+  }
+
+  function logout(){
+    FB.logout(function(response) {
+      if(response.status === 'connected'){
+        alert("wow")
+      }else if(response.status==='not_authorized'){
+        alert("nggak wow")
+      }else{
+        alert("nggak wow")
+      }
+    });
+  } */
 </script>
 
-  <app-root ><div class="loader"/></app-root >
+  <app-root onclick="login()"><div class="loader"/></app-root >
 <div id="status"></div>
 </body>
 </html>

@@ -1,21 +1,36 @@
 import { Injectable }     from '@angular/core';
 import { Http, Response } from '@angular/http';
-import { Home }           from './home';
 import { Observable }     from 'rxjs/Observable';
-import {Globals} from "../globals";
 import 'rxjs/Rx';
+import {Globals} from "../globals";
+import { ActivatedRoute,Router } from '@angular/router';
+import {Home} from "../home/home";
 
 @Injectable()
-export class HomeService {
-    constructor (private http: Http) {}
+export class SearchResultService{
+    name:string;
+    pageNumber:string;
+    private searchUrl;
+    constructor (private http: Http,private route: ActivatedRoute) {
+        this.route.params.subscribe(params => {let name = params['name'];this.name = name;});
+    }
 
-    private homesUrl = Globals.server+'/product?product_category=computer&size=500';  // URL to web API
+    private page=0;
 
-    getHomes (){
-        return this.http.get(this.homesUrl)
+
+
+    changePage( pageNumber){
+        this.page =pageNumber;
+        this.getSearch();
+    }
+
+    getSearch (){
+    this.searchUrl = Globals.server+'/product?product_name='+this.name+'&page='+this.page+'&size=60';
+        return this.http.get(this.searchUrl)
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }
+
     private extractData(res: Response) {
         let body = res.json();
         return body.data || { };

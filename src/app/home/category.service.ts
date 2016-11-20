@@ -3,70 +3,53 @@ import { Http, Response } from '@angular/http';
 import { Home }           from './home';
 import { Observable }     from 'rxjs/Observable';
 import 'rxjs/Rx';
+import {Globals} from "../globals";
 
 @Injectable()
 export class CategoryService {
     constructor (private http: Http) {
-        this.linkFull();
+
     }
 
     private page=0;
 
-    private computerUrl = 'http://localhost:8090/product?product_category=computer&size=12&page=0';
-    private beautyUrl = 'http://localhost:8090/product?product_category=beauty&size=12&page=0';
-    private bookUrl = 'http://localhost:8090/product?product_category=book&size=12&page=0';
-    private clothingUrl = 'http://localhost:8090/product?product_category=clothing&size=12&page=0';
-    private shoesUrl = 'http://localhost:8090/product?product_category=shoes&size=12&page=0';
-    private electronicUrl = 'http://localhost:8090/product?product_category=electronic&size=12&page=0';
-    private gamesUrl = 'http://localhost:8090/product?product_category=games&size=12&page=0';
-    private gardenUrl = 'http://localhost:8090/product?product_category=garden&size=12&page=0';
-    private healthUrl = 'http://localhost:8090/product?product_category=health&size=12&page=0';
-    private homeUrl = 'http://localhost:8090/product?product_category=home&size=12&page=0';
-    private jeweleryUrl = 'http://localhost:8090/product?product_category=jewelery&size=12&page=0';
-    private kidsUrl = 'http://localhost:8090/product?product_category=kids&size=12&page=0';
-    private moviesUrl = 'http://localhost:8090/product?product_category=movies&size=12&page=0';
-    private outdoorsUrl = 'http://localhost:8090/product?product_category=outdoors&size=12&page=0';
-    private sportUrl = 'http://localhost:8090/product?product_category=sport&size=12&page=0';
+    private computerUrl = Globals.server+'/product?product_category=computer&size=12&page=0';
+    private beautyUrl = Globals.server+'/product?product_category=beauty&size=12&page=0';
+    private bookUrl = Globals.server+'/product?product_category=book&size=12&page=0';
+    private clothingUrl = Globals.server+'/product?product_category=clothing&size=12&page=0';
+    private shoesUrl = Globals.server+'/product?product_category=shoes&size=12&page=0';
+    private electronicUrl = Globals.server+'/product?product_category=electronic&size=12&page=0';
+    private gamesUrl = Globals.server+'/product?product_category=games&size=12&page=0';
+    private gardenUrl = Globals.server+'/product?product_category=garden&size=12&page=0';
+    private healthUrl = Globals.server+'/product?product_category=health&size=12&page=0';
+    private homeUrl = Globals.server+'/product?product_category=home&size=12&page=0';
+    private jeweleryUrl = Globals.server+'/product?product_category=jewelery&size=12&page=0';
+    private kidsUrl = Globals.server+'/product?product_category=kids&size=12&page=0';
+    private moviesUrl = Globals.server+'/product?product_category=movies&size=12&page=0';
+    private outdoorsUrl = Globals.server+'/product?product_category=outdoors&size=12&page=0';
+    private sportUrl = Globals.server+'/product?product_category=sport&size=12&page=0';
 
-    private computerUrlfull = "a";
-    private beautyUrlfull = "a";
-    private bookUrlfull= "a";
-    private clothingUrlfull= "a";
-    private shoesUrlfull= "a";
-    private electronicUrlfull= "a";
-    private gamesUrlfull= "a";
-    private gardenUrlfull= "a";
-    private healthUrlfull= "a";
-    private homeUrlfull= "a";
-    private jeweleryUrlfull= "a";
-    private kidsUrlfull= "a";
-    private moviesUrlfull= "a";
-    private outdoorsUrlfull= "a";
-    private sportUrlfull= "a";
 
-    linkFull(){
-        this.computerUrlfull     = 'http://localhost:8090/product?product_category=computer&size=60&page='+this.page;
-        this.beautyUrlfull       = 'http://localhost:8090/product?product_category=beauty&size=120&page='+this.page;
-        this.bookUrlfull         = 'http://localhost:8090/product?product_category=book&size=120&page='+this.page;
-        this.clothingUrlfull     = 'http://localhost:8090/product?product_category=clothing&size=120&page='+this.page;
-        this.shoesUrlfull        = 'http://localhost:8090/product?product_category=shoes&size=10&page='+this.page;
-        this.electronicUrlfull   = 'http://localhost:8090/product?product_category=electronic&size=120&page='+this.page;
-        this.gamesUrlfull        = 'http://localhost:8090/product?product_category=games&size=120&page='+this.page;
-        this.gardenUrlfull       = 'http://localhost:8090/product?product_category=garden&size=120&page='+this.page;
-        this.healthUrlfull       = 'http://localhost:8090/product?product_category=health&size=120&page='+this.page;
-        this.homeUrlfull         = 'http://localhost:8090/product?product_category=home&size=120&page='+this.page;
-        this.jeweleryUrlfull     = 'http://localhost:8090/product?product_category=jewelery&size=120&page='+this.page;
-        this.kidsUrlfull         = 'http://localhost:8090/product?product_category=kids&size=120&page='+this.page;
-        this.moviesUrlfull       = 'http://localhost:8090/product?product_category=movies&size=120&page='+this.page;
-        this.outdoorsUrlfull     = 'http://localhost:8090/product?product_category=outdoors&size=120&page='+this.page;
-        this.sportUrlfull        = 'http://localhost:8090/product?product_category=sport&size=120&page='+this.page;
-    }
+        private computerUrlfull     = Globals.server+'/product?product_category=computer&size=60&page='+this.page;
+        private beautyUrlfull       = Globals.server+'/product?product_category=beauty&size=120&page='+this.page;
+        private bookUrlfull         = Globals.server+'/product?product_category=book&size=120&page='+this.page;
+        private clothingUrlfull     = Globals.server+'/product?product_category=clothing&size=120&page='+this.page;
+        private shoesUrlfull        = Globals.server+'/product?product_category=shoes&size=10&page='+this.page;
+        private electronicUrlfull   = Globals.server+'/product?product_category=electronic&size=120&page='+this.page;
+        private gamesUrlfull        = Globals.server+'/product?product_category=games&size=120&page='+this.page;
+        private gardenUrlfull       = Globals.server+'/product?product_category=garden&size=120&page='+this.page;
+        private healthUrlfull       = Globals.server+'/product?product_category=health&size=120&page='+this.page;
+        private homeUrlfull         = Globals.server+'/product?product_category=home&size=120&page='+this.page;
+        private jeweleryUrlfull     = Globals.server+'/product?product_category=jewelery&size=120&page='+this.page;
+        private kidsUrlfull         = Globals.server+'/product?product_category=kids&size=120&page='+this.page;
+        private moviesUrlfull       = Globals.server+'/product?product_category=movies&size=120&page='+this.page;
+        private outdoorsUrlfull     = Globals.server+'/product?product_category=outdoors&size=120&page='+this.page;
+        private sportUrlfull        = Globals.server+'/product?product_category=sport&size=120&page='+this.page;
+
 
 
     changePage( pageNumber){
         this.page =pageNumber;
-        this.linkFull();
-        alert(this.computerUrlfull);
         this.getComputerFull();
     }
     getComputer (){
@@ -253,6 +236,7 @@ export class CategoryService {
         let body = res.json();
         return body.data || { };
     }
+
     private handleError (error: any) {
         // In a real world app, we might use a remote logging infrastructure
         // We'd also dig deeper into the error to get a better message

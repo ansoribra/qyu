@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute,Router } from '@angular/router';
 import {Home} from "../home/home";
 import {CategoryService} from "../home/category.service";
-
+import {Globals} from "../globals";
 
 @Component({
   selector: 'app-seemore',
@@ -12,6 +12,7 @@ import {CategoryService} from "../home/category.service";
 })
 
 export class SeemoreComponent implements OnInit {
+  server=Globals.server;
   id:string;
   idCat:string;
   prevactive:string;

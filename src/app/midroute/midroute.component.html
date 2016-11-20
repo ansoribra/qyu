@@ -1,3 +1,3 @@
 <header (showMenu)="popup.searchmenu()" (hideMenu)="popup.searchmenuhide()" (searchemit)="searchCalled($event)"></header>
-<home (click)="popup.visibility='hidden'"></home>
+<home (click)="popup.visibility='hidden'" ></home>
 <app-searchpopup #popup  [term]='searchValue'></app-searchpopup>

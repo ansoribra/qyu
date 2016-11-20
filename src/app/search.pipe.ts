@@ -9,7 +9,7 @@ export class SearchPipe implements PipeTransform {
     if (term=== undefined) return null;
 
     return  service.filter(function(service){
-      return  service.id.toLowerCase().includes(term.toLowerCase());
+      return  service.product_name.toLowerCase().includes(term.toLowerCase());
     })
   }
 

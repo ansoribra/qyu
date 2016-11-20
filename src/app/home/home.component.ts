@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Home} from "./home";
 import {CategoryService} from "./category.service";
 import { Router } from '@angular/router';
+import {Globals} from "../globals";
 
 @Component({
   selector: 'home',
@@ -11,6 +12,7 @@ import { Router } from '@angular/router';
 })
 
 export class HomeComponent implements OnInit {
+  server= Globals.server;
   errorMessage: string;
   computers: Home[];
   beauties: Home[];

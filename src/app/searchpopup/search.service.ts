@@ -1,14 +1,15 @@
 import { Injectable }     from '@angular/core';
 import { Http, Response } from '@angular/http';
-import { Home }           from './../home';
+import { Home }           from '../home/home';
 import { Observable }     from 'rxjs/Observable';
 import 'rxjs/Rx';
+import {Globals} from "../globals";
 
 @Injectable()
 export class SearchService {
     constructor (private http: Http) {}
 
-    private Url = 'http://localhost:8090/product?size=2000';  // URL to web API
+    private Url = Globals.server+'/product?size=2000';  // URL to web API
 
     getService (){
         return this.http.get(this.Url)

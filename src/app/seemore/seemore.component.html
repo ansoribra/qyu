@@ -1,19 +1,18 @@
-<div class="centerer">
 <header (showMenu)="popup.searchmenu()" (hideMenu)="popup.searchmenuhide()" (searchemit)="searchCalled($event)"></header>
-<app-sidecategory style="text-align: center"></app-sidecategory>
-<div class="anchor" id="computer">ansor</div>
+<div class="centerer">
 
-
-  <div class="contentcomputer">
+  <div class="content">
     <div>
       <div class="prodhead">{{idCat}}</div>
       <a [routerLink]="['/home']"><div class="seemore">Back to Home</div></a></div><br><br>
     <div class="line-separator"></div>
     <div class="borderproduct" *ngFor="let category of categories">
-      <img width="150px" height="150px" src="http://localhost:8090/images/{{category.product_store_id}}/{{ category.id }}.jpg"/><br>
+      <div [routerLink]="['/detailprod',category.id]">
+      <img width="150px" height="150px" src="{{server}}/public/{{category.product_store_id}}/{{ category.id }}/1.jpg"/><br>
       <div class="butproduct">
         <div class="prodname">{{ category.product_name }}</div>
         <div class="prodprice">RP: {{ category.product_price | currency:'IDR'|slice:3}}</div>
+      </div>
       </div>
     </div>
 
@@ -26,7 +25,5 @@
     </div>
     <div (click)="next()" class="nextpage" [ngStyle]="{'background':nextactive, 'pointer-events': nextpointeractive}">NEXT</div>
   </div>
-
-
   <app-searchpopup #popup [term]='searchValue'></app-searchpopup>
 </div>
