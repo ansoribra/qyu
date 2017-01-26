@@ -27,17 +27,25 @@ export class HeaderComponent {
         this.searchButtonShrink = yPos ? "search-button-shrink" : "";
     }
 
+    refresh(){
+        window.location.reload();
+    }
+
     @Output() showMenu = new EventEmitter();
     @Output() hideMenu = new EventEmitter();
 
     showmenu(){
-        //noinspection TypeScriptUnresolvedFunction
         this.showMenu.emit(null);
     }
 
     hidemenu(){
-        //noinspection TypeScriptUnresolvedFunction
         this.hideMenu.emit(null);
+    }
+
+    @Output() showLogin = new EventEmitter();
+
+    showlogin(){
+        this.showLogin.emit(null);
     }
 
     @Output() searchemit: EventEmitter<string> = new EventEmitter<string>();

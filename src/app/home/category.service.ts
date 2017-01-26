@@ -1,5 +1,5 @@
 import { Injectable }     from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Http, Response, Headers } from '@angular/http';
 import { Home }           from './home';
 import { Observable }     from 'rxjs/Observable';
 import 'rxjs/Rx';
@@ -46,188 +46,187 @@ export class CategoryService {
         private outdoorsUrlfull     = Globals.server+'/product?product_category=outdoors&size=120&page='+this.page;
         private sportUrlfull        = Globals.server+'/product?product_category=sport&size=120&page='+this.page;
 
-
-
+    private headers1 = new Headers({'Content-Type': 'application/json', 'Authorization': 'Bearer '+localStorage.getItem("id_token")});
     changePage( pageNumber){
         this.page =pageNumber;
         this.getComputerFull();
     }
     getComputer (){
-        return this.http.get(this.computerUrl)
+        return this.http.get(this.computerUrl,{headers: this.headers1})
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }
 
     getBeauty (){
-        return this.http.get(this.beautyUrl)
+        return this.http.get(this.beautyUrl,{headers: this.headers1})
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }
 
     getBook (){
-        return this.http.get(this.bookUrl)
+        return this.http.get(this.bookUrl,{headers: this.headers1})
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }
 
     getClothing (){
-        return this.http.get(this.clothingUrl)
+        return this.http.get(this.clothingUrl,{headers: this.headers1})
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }
 
     getShoes (){
-        return this.http.get(this.shoesUrl)
+        return this.http.get(this.shoesUrl,{headers: this.headers1})
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }
 
     getElectronic (){
-        return this.http.get(this.electronicUrl)
+        return this.http.get(this.electronicUrl,{headers: this.headers1})
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }
 
     getGames (){
-        return this.http.get(this.gamesUrl)
+        return this.http.get(this.gamesUrl,{headers: this.headers1})
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }
 
     getGarden (){
-        return this.http.get(this.gardenUrl)
+        return this.http.get(this.gardenUrl,{headers: this.headers1})
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }
 
     getHealth (){
-        return this.http.get(this.healthUrl)
+        return this.http.get(this.healthUrl,{headers: this.headers1})
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }
 
     getJewelery (){
-        return this.http.get(this.jeweleryUrl)
+        return this.http.get(this.jeweleryUrl,{headers: this.headers1})
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }
 
     getKids (){
-        return this.http.get(this.kidsUrl)
+        return this.http.get(this.kidsUrl,{headers: this.headers1})
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }
 
     getMovies (){
-        return this.http.get(this.moviesUrl)
+        return this.http.get(this.moviesUrl,{headers: this.headers1})
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }
 
     getOutdoors (){
-        return this.http.get(this.outdoorsUrl)
+        return this.http.get(this.outdoorsUrl,{headers: this.headers1})
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }
 
     getSport (){
-        return this.http.get(this.sportUrl)
+        return this.http.get(this.sportUrl,{headers: this.headers1})
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }
 
     getHome (){
-        return this.http.get(this.homeUrl)
+        return this.http.get(this.homeUrl,{headers: this.headers1})
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }
 
     getComputerFull (){
-        return this.http.get(this.computerUrlfull)
+        return this.http.get(this.computerUrlfull,{headers: this.headers1})
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }
 
     getBeautyFull (){
-        return this.http.get(this.beautyUrlfull)
+        return this.http.get(this.beautyUrlfull,{headers: this.headers1})
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }
 
     getBookFull (){
-        return this.http.get(this.bookUrlfull)
+        return this.http.get(this.bookUrlfull,{headers: this.headers1})
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }
 
     getClothingFull (){
-        return this.http.get(this.clothingUrlfull)
+        return this.http.get(this.clothingUrlfull,{headers: this.headers1})
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }
 
     getShoesFull (){
-        return this.http.get(this.shoesUrlfull)
+        return this.http.get(this.shoesUrlfull,{headers: this.headers1})
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }
 
     getElectronicFull (){
-        return this.http.get(this.electronicUrlfull)
+        return this.http.get(this.electronicUrlfull,{headers: this.headers1})
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }
 
     getGamesFull (){
-        return this.http.get(this.gamesUrlfull)
+        return this.http.get(this.gamesUrlfull,{headers: this.headers1})
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }
 
     getGardenFull (){
-        return this.http.get(this.gardenUrlfull)
+        return this.http.get(this.gardenUrlfull,{headers: this.headers1})
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }
 
     getHealthFull (){
-        return this.http.get(this.healthUrlfull)
+        return this.http.get(this.healthUrlfull,{headers: this.headers1})
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }
 
     getJeweleryFull (){
-        return this.http.get(this.jeweleryUrlfull)
+        return this.http.get(this.jeweleryUrlfull,{headers: this.headers1})
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }
 
     getKidsFull (){
-        return this.http.get(this.kidsUrlfull)
+        return this.http.get(this.kidsUrlfull,{headers: this.headers1})
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }
 
     getMoviesFull (){
-        return this.http.get(this.moviesUrlfull)
+        return this.http.get(this.moviesUrlfull,{headers: this.headers1})
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }
 
     getOutdoorsFull (){
-        return this.http.get(this.outdoorsUrlfull)
+        return this.http.get(this.outdoorsUrlfull,{headers: this.headers1})
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }
 
     getSportFull (){
-        return this.http.get(this.sportUrlfull)
+        return this.http.get(this.sportUrlfull,{headers: this.headers1})
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }
 
     getHomeFull (){
-        return this.http.get(this.homeUrlfull)
+        return this.http.get(this.homeUrlfull,{headers: this.headers1})
             .map(res => <Home[]> res.json())
             .catch(this.handleError);
     }

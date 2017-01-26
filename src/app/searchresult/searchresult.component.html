@@ -1,7 +1,13 @@
-<header (showMenu)="popup.searchmenu()" (hideMenu)="popup.searchmenuhide()" (searchemit)="searchCalled($event)"></header>
-<br><br><br><br><br><br><br>
+<header (showMenu)="popup.searchmenu()"
+        (hideMenu)="popup.searchmenuhide()"
+        (searchemit)="searchCalled($event)"
+        (showLogin)="login.buka()">
+</header>
+<app-searchpopup #popup [term]='searchValue' id="popmen"></app-searchpopup>
+<app-login #login></app-login>
 
-<div class="centerer">
+<div (click)="popup.visibility='hidden'" style="width: 100%;  overflow: auto;">
+<div  class="centerer">
 <div class="content">
     <div>
         <div class="prodhead">Hasil pencarian dari keyword {{name}}</div>
@@ -26,5 +32,5 @@
     </div>
     <div (click)="next()" class="nextpage" [ngStyle]="{'background':nextactive, 'pointer-events': nextpointeractive}">NEXT</div>
 </div>
-  <app-searchpopup #popup [term]='searchValue'></app-searchpopup>
+</div>
 </div>

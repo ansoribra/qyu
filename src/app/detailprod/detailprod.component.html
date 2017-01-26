@@ -1,7 +1,13 @@
-<header (showMenu)="popup.searchmenu()" (hideMenu)="popup.searchmenuhide()" (searchemit)="searchCalled($event)"></header>
+<header (showMenu)="popup.searchmenu()"
+        (hideMenu)="popup.searchmenuhide()"
+        (searchemit)="searchCalled($event)"
+        (showLogin)="login.buka()">
+</header>
+<app-searchpopup #popup  [term]='searchValue'></app-searchpopup>
+<app-login #login></app-login>
 <br><br><br><br><br>
 
-<div style="width: 100%;">
+<div (click)="popup.visibility='hidden'" style="width: 100%; ">
   <div class="centerer">
     <div class="leftbar">
     <div class="mainphoto">

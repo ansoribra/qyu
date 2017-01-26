@@ -23,14 +23,43 @@ import { PagingComponent } from './paging/paging.component';
 import {enableProdMode} from '@angular/core';
 import { DetailprodComponent } from './detailprod/detailprod.component';
 import { SearchresultComponent } from './searchresult/searchresult.component';
+import { LoginComponent } from './login/login.component';
+import { SellerareaComponent } from './sellerarea/sellerarea.component';
+import {UserService} from "./service/user.service";
+import {CategoryService} from "./home/category.service";
 
 
 
 enableProdMode();
 @NgModule({
-  declarations: [AppComponent, HomeComponent, HeaderComponent,TrackScrollDirective, SearchpopupComponent, SearchPipe,routingComponents, SeemoreComponent, MidrouteComponent, SidecategoryComponent, PagingComponent, DetailprodComponent, SearchresultComponent],
-  imports: [BrowserModule, FormsModule, HttpModule, MdCardModule,MdButtonModule,MdIconModule,MdInputModule,Ng2PageScrollModule,AppRoutesModule],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    HeaderComponent,
+    TrackScrollDirective,
+    SearchpopupComponent,
+    SearchPipe,
+    routingComponents,
+    SeemoreComponent,
+    MidrouteComponent,
+    SidecategoryComponent,
+    PagingComponent,
+    DetailprodComponent,
+    SearchresultComponent,
+    LoginComponent,
+    SellerareaComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    MdCardModule,
+    MdButtonModule,
+    MdIconModule,
+    MdInputModule,
+    Ng2PageScrollModule,
+    AppRoutesModule],
   bootstrap: [AppComponent],
-  providers: [MdIconRegistry]
+  providers: [MdIconRegistry, UserService, CategoryService]
 })
 export class AppModule { }

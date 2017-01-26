@@ -28,6 +28,8 @@ export class DetailprodComponent implements OnInit {
   private sub: any;
   starspath:string;
   items:any;
+  searchValue:string;
+  visibility:string='visible';
 
 
   constructor(private detailprodService:DetailprodService,private route: ActivatedRoute) {
@@ -76,8 +78,10 @@ export class DetailprodComponent implements OnInit {
           this.product_image_total = details.product_image_total;
           this.setProductImageTotal(this.product_image_total);
         }, error => this.errorMessage = <any>error);
+  }
 
-
+  searchCalled(message:string):void{
+    this.searchValue=message;
   }
 
   getstars(x){

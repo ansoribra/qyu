@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+import { Http, Response } from '@angular/http';
 import { ActivatedRoute,Router } from '@angular/router';
-import {SearchResultService} from "./searchresult.service";
 import {Globals} from "../globals";
 
 @Component({
   selector: 'app-searchresult',
   templateUrl: './searchresult.component.html',
-  styleUrls: ['./searchresult.component.css'],
-  providers: [SearchResultService]
+  styleUrls: ['./searchresult.component.css']
 })
 export class SearchresultComponent implements OnInit {
   name:string;
-  searches:string;
+  searches:any;
   errorMessage: string;
   server:string=Globals.server;
-
+  pageNumber:string;
+  private page=0;
   prevactive:string;
   nextactive:string;
   prevpointeractive:string;
@@ -29,8 +29,11 @@ export class SearchresultComponent implements OnInit {
   container:any={};
   blocknext:any;
   currentpage =0;
+  searchValue:string;
+  visibility:string='visible';
 
-  constructor(private route: ActivatedRoute,private searchService:SearchResultService) {
+  constructor(private http: Http,private route: ActivatedRoute) {
+    this.route.params.subscribe(params => {let name = params['name'];this.name = name; });
     this.getSearch();
   }
 
@@ -40,13 +43,25 @@ export class SearchresultComponent implements OnInit {
     this.paginationcontrol();
   }
 
-  getSearch() {
-      this.searchService.getSearch().subscribe(searches => {this.searches = searches.content;console.log(this.searches)},
-              error => this.errorMessage = <any>error);
+  searchCalled(message:string):void{
+    this.searchValue=message;
+  }
 
-      this.searchService.getSearch()
-          .subscribe(totalpages => this.totalpages = totalpages.totalPages,
-              error => this.errorMessage = <any>error);
+  getSearch() {
+    this.http.get(this.server+'/product?product_name='+this.name+'&page='+this.page+'&size=60')
+        .map(res => res.json())
+        .subscribe(searches => {this.searches = searches.content;console.log(this.searches)},
+            error => this.errorMessage = <any>error);
+
+    this.http.get(this.server+'/product?product_name='+this.name+'&page='+this.page+'&size=60')
+        .map(res => res.json())
+        .subscribe(totalpages => this.totalpages = totalpages.totalPages,
+            error => this.errorMessage = <any>error);
+  }
+
+  changePage( pageNumber){
+    this.page =pageNumber;
+    this.getSearch();
   }
 
   createRange(totalpages,indexpagination){
@@ -111,7 +126,7 @@ export class SearchresultComponent implements OnInit {
 
   moveto(number){
     this.currentpage=number;
-    this.searchService.changePage(this.currentpage);
+    this.changePage(this.currentpage);
     this.getSearch();
     this.paginationcontrol();
   }

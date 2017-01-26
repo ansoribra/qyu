@@ -1,7 +1,13 @@
-<header (showMenu)="popup.searchmenu()" (hideMenu)="popup.searchmenuhide()" (searchemit)="searchCalled($event)"></header>
-<div class="centerer">
+<header (showMenu)="popup.searchmenu()"
+        (hideMenu)="popup.searchmenuhide()"
+        (searchemit)="searchCalled($event)"
+        (showLogin)="login.buka()">
+</header>
+<app-searchpopup #popup [term]='searchValue'></app-searchpopup>
+<app-login #login></app-login>
 
-  <div class="content">
+<div (click)="popup.visibility='hidden'" class="centerer">
+  <div  class="content">
     <div>
       <div class="prodhead">{{idCat}}</div>
       <a [routerLink]="['/home']"><div class="seemore">Back to Home</div></a></div><br><br>
@@ -25,5 +31,4 @@
     </div>
     <div (click)="next()" class="nextpage" [ngStyle]="{'background':nextactive, 'pointer-events': nextpointeractive}">NEXT</div>
   </div>
-  <app-searchpopup #popup [term]='searchValue'></app-searchpopup>
 </div>

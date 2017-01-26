@@ -14,14 +14,15 @@ import 'rxjs/Rx';
 })
 
 export class SearchpopupComponent implements OnInit {
-
-  ees='ee';
-
+  loading:any;
   @Input() sendvisi;
   visibility:string="hidden";
   searchMenuShrink : string = '';
   @Input() term:string;
 
+  refresh(){
+    window.location.reload();
+  }
   searchmenu(){
     this.visibility= "visible";
   }
@@ -33,6 +34,7 @@ export class SearchpopupComponent implements OnInit {
   ngOnInit() {
     this.visibility =this.sendvisi;
     this.getHomes();
+    this.loadersearch();
   }
 
   onScrolled(yPos : number) {
@@ -49,5 +51,9 @@ export class SearchpopupComponent implements OnInit {
         .subscribe(
             services => this.services = services.content,
             error =>  this.errorMessage = <any>error);
+  }
+
+  loadersearch(){
+
   }
 }

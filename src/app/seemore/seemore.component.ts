@@ -30,7 +30,8 @@ export class SeemoreComponent implements OnInit {
   container:any={};
   blocknext:any;
   currentpage =0;
-
+  searchValue:string;
+  visibility:string='visible';
   errorMessage: string;
   private sub: any;
 
@@ -42,6 +43,10 @@ export class SeemoreComponent implements OnInit {
     this.sub = this.route.params.subscribe(params => {let   id = params['id'];this.id = id;});
     this.getHomes();
     this.paginationcontrol();
+  }
+
+  searchCalled(message:string):void{
+    this.searchValue=message;
   }
 
   createRange(totalpages,indexpagination){
